@@ -1,0 +1,5 @@
+# - esse arquivo serve para deixar claro que para essa role executar sem problemas, ela depende
+# do webserver
+---
+dependencies:
+  - webserver

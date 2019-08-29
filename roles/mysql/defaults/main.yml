@@ -1,0 +1,6 @@
+# - esses valores defaults são para tratar situações em que o usuário não passa o valor das
+# variáveis
+---
+wp_host_ip: 
+  - localhost
+  - 127.0.0.1

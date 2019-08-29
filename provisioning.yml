@@ -1,0 +1,26 @@
+---
+- hosts: database
+  roles:
+    - mysql # todos os arquivos estão dentro desse diretório
+
+- hosts: wordpress # pega do arquivo de invenvário hosts
+  roles:
+    # - webserver -> colocado na lista de dependências no diretório meta
+    - wordpress
+
+#  tasks: # aqui vc informa uma lista de comandos
+#    - name: 'Instalando o PHP'
+#      apt:
+#        name: php5
+#        state: latest # o ansible vai instalar o pacote mais novo de php5
+#      become: yes # diz para usar o root para instalar o php
+#    - name: 'Instalando o Apache'
+#      apt:
+#        name: apache2
+#        state: latest
+#      become: yes
+#    - name: 'Instalando o modphp'
+#      apt:
+#        name: libapache2-mod-php5
+#        state: latest
+#      become: yes

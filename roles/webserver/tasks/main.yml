@@ -1,0 +1,14 @@
+---
+- name: 'Instalando pacotes de dependências'
+  apt:
+    name: "{{ item }}" # vai ser substituido pelos itens do loop
+    state: latest
+  become: yes
+  with_items: # criando um loop de itens a serem instalados
+    - php5
+    - apache2
+    - libapache2-mod-php5
+    - php5-gd
+    - libssh2-php
+    - php5-mcrypt
+    - php5-mysql
